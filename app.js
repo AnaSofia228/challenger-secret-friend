@@ -5,11 +5,16 @@ function limpiarCaja() {
     document.getElementById("nameInput").value = "";
 }
 
+function esNombreValido(nombre) {
+    // Solo letras y espacios, mínimo 2 caracteres
+    return /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}$/.test(nombre);
+}
+
 function agregarNombreLista() {
     let nombre = document.getElementById("nameInput").value.trim();
     let alertMensaje = document.querySelector("#alert");
     
-    if (nombre === "") {
+    if (nombre === "" || !esNombreValido(nombre))  {
         alert("Por favor, ingresa un nombre válido.");
     } else if (listaNombres.includes(nombre)) {
         alertMensaje.innerHTML = "El nombre ya está en la lista.";
