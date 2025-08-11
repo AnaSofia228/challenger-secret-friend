@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amigo Secreto</title>
+</head>
+<body>
+
+    <div class="container">
+        <img src="./assets/secret.jpg" alt="">
+        <div class="input-container">
+            <input type="text" id="nameInput" placeholder="Ingresa un nombre">
+            <button id="addButton" onclick="agregarNombreLista()">Agregar</button>
+        </div>
+    </div>
+
+    <div class="list-container">
+        <p id="alert">No has ingresado ningún nombre.</p>
+        <ul id="nameDisplay"></ul>
+        <button id="random" onclick="sortearNombres()" disabled>Sortear</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
